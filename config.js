@@ -75,11 +75,11 @@ window.WEDDING = {
   ],
 
   // Top-right social icons
-  whatsapp: "",             // number with country code, e.g. "919876543210" (empty = share the invitation on WhatsApp)
-  instagram: "",            // e.g. "https://instagram.com/yourhandle" (empty = #ArunWedsLikhitha hashtag page)
+  whatsapp: "917899250602",           // number with country code, e.g. "919876543210" (empty = share the invitation on WhatsApp)
+  instagram: "https://www.instagram.com/official_arungowda/",          // e.g. "https://instagram.com/yourhandle" (empty = #ArunWedsLikhitha hashtag page)
 
   // RSVP goes to WhatsApp. Country code + number, digits only, e.g. "919876543210"
-  rsvpWhatsApp: "",
+  rsvpWhatsApp: "917899250602",
   rsvpBy: "",
 
   heroImage: "",
