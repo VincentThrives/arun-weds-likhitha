@@ -15,7 +15,7 @@
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%237a1526'/%3E%3Ctext x='32' y='42' font-size='26' text-anchor='middle' fill='%23e8c98a' font-family='serif'%3EA%26L%3C/text%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Pinyon+Script&family=Jost:wght@300;400;500&family=Noto+Serif+Kannada:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Pinyon+Script&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body class="locked">
@@ -23,7 +23,7 @@
   <!-- ============ ENVELOPE INTRO ============ -->
   <div id="intro" class="intro" aria-label="Open the invitation">
     <div class="intro-glow"></div>
-    <p class="intro-kicker">ಶ್ರೀ ಗಣೇಶಾಯ ನಮಃ</p>
+    <p class="intro-kicker">|| Sri Ganeshaya Namaha ||</p>
     <p class="intro-to">You are cordially invited</p>
     <div class="envelope" id="envelope">
       <div class="env-back"></div>
@@ -61,7 +61,7 @@
     <div class="hero-bg" id="heroBg"></div>
     <svg class="mandala" id="mandala" viewBox="-200 -200 400 400" aria-hidden="true"></svg>
     <div class="hero-inner">
-      <p class="invocation kn">ಶ್ರೀ ಗಣೇಶಾಯ ನಮಃ</p>
+      <p class="invocation kn">|| Sri Ganeshaya Namaha ||</p>
       <p class="blessing reveal" data-bind="blessing"></p>
       <p class="eyebrow reveal">Together with their families</p>
       <h1 class="names">
@@ -69,7 +69,6 @@
         <span class="weds reveal">weds</span>
         <span class="name reveal" data-bind="bride.name"></span>
       </h1>
-      <p class="names-kn kn reveal"><span data-bind="groom.kannada"></span> &nbsp;❀&nbsp; <span data-bind="bride.kannada"></span></p>
       <div class="hero-date reveal">
         <span id="heroDay"></span>
         <span class="dot"></span>
@@ -97,7 +96,7 @@
     <!-- ============ INVITATION ============ -->
     <section id="invite" class="section invite">
       <div class="ornament reveal"></div>
-      <p class="kn reveal invite-kn">ಶುಭ ವಿವಾಹ ಮಹೋತ್ಸವಕ್ಕೆ ಆದರದ ಸ್ವಾಗತ</p>
+      <p class="kn reveal invite-kn">An Auspicious Celebration</p>
       <h2 class="title reveal">The Wedding Invitation</h2>
       <p class="elders reveal" data-bind="elders"></p>
       <p class="lead reveal">
@@ -109,7 +108,6 @@
           <div class="portrait" id="groomPhoto"><span class="mono">A</span></div>
           <p class="ptitle" data-bind="groom.title"></p>
           <h3 data-bind="groom.name"></h3>
-          <p class="kn small" data-bind="groom.kannada"></p>
           <p class="parents" data-bind="groom.parents"></p>
           <p class="place" data-bind="groom.place"></p>
         </article>
@@ -120,7 +118,6 @@
           <div class="portrait" id="bridePhoto"><span class="mono">L</span></div>
           <p class="ptitle" data-bind="bride.title"></p>
           <h3 data-bind="bride.name"></h3>
-          <p class="kn small" data-bind="bride.kannada"></p>
           <p class="parents" data-bind="bride.parents"></p>
           <p class="place" data-bind="bride.place"></p>
         </article>
@@ -143,7 +140,7 @@
 
     <!-- ============ EVENTS ============ -->
     <section id="events" class="section events">
-      <p class="kn reveal">ಕಾರ್ಯಕ್ರಮಗಳು</p>
+      <p class="kn reveal">Save the Dates</p>
       <h2 class="title reveal">Wedding Celebrations</h2>
       <div class="ornament small reveal"></div>
       <div class="timeline" id="timeline"></div>
@@ -170,7 +167,7 @@
 
     <!-- ============ VENUE ============ -->
     <section id="venue" class="section venue">
-      <p class="kn reveal">ಸ್ಥಳ</p>
+      <p class="kn reveal">Where to Find Us</p>
       <h2 class="title reveal">The Venue</h2>
       <div class="ornament small reveal"></div>
       <div class="venue-grid">
@@ -223,8 +220,7 @@
   <footer class="footer">
     <div class="ornament small light"></div>
     <p class="script big">Arun &amp; Likhitha</p>
-    <p class="kn">ನಿಮ್ಮ ಆಶೀರ್ವಾದವೇ ನಮಗೆ ಉಡುಗೊರೆ</p>
-    <p class="muted">Your blessings are the greatest gift</p>
+        <p class="muted">Your blessings are the greatest gift</p>
     <button class="btn ghost light" id="shareBtn" type="button">Share this invitation</button>
     <p class="muted tiny" data-bind="hashtag"></p>
   </footer>

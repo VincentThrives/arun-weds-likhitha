@@ -8,7 +8,6 @@ window.WEDDING = {
   elders: "With the blessings of Smt. Puttamma & Sri Late Palyada Kamegowda",
   groom: {
     name: "Arun Gowda K",
-    kannada: "ಅರುಣ್ ಗೌಡ ಕೆ",
     title: "Chi. Ry. · B.E",
     parents: "S/o Smt. M. Chandramma & Sri K. Kantharaju",
     place: "Kallambella, Sira Taluk, Tumkur Dist.",
@@ -16,7 +15,6 @@ window.WEDDING = {
   },
   bride: {
     name: "Likhitha H K",
-    kannada: "ಲಿಖಿತಾ ಎಚ್ ಕೆ",
     title: "Chi. Sou. · B.E",
     parents: "D/o Smt. Bhagyalakshmi G.M & Sri Krishnappa H.K",
     place: "Halenahalli Kallambella (H), Sira Taluk, Tumkur Dist.",
@@ -37,7 +35,7 @@ window.WEDDING = {
   events: [
     {
       name: "Reception",
-      kannada: "ಆರತಕ್ಷತೆ",
+      subtitle: "The Evening Celebration",
       start: "2026-11-11T18:30:00+05:30",
       end:   "2026-11-11T22:00:00+05:30",
       timeLabel: "6:30 pm onwards",
@@ -48,7 +46,7 @@ window.WEDDING = {
     },
     {
       name: "Muhurtham",
-      kannada: "ಶುಭ ಮುಹೂರ್ತ",
+      subtitle: "The Sacred Union",
       start: "2026-11-12T08:00:00+05:30",
       end:   "2026-11-12T08:45:00+05:30",
       note:  "Vrishchika Lagna",

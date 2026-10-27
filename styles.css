@@ -27,7 +27,7 @@ body {
 }
 body.locked { overflow: hidden; height: 100vh; }
 img { max-width: 100%; display: block; }
-.kn { font-family: var(--kn); color: var(--gold); letter-spacing: .02em; font-size: .95rem; }
+.kn { font-family: var(--sans); font-weight: 400; color: var(--gold); text-transform: uppercase; letter-spacing: .28em; font-size: .72rem; }
 .script { font-family: var(--script); font-weight: 400; }
 .muted { color: rgba(255,255,255,.6); font-family: var(--sans); font-weight: 300; font-size: .85rem; letter-spacing: .08em; }
 .tiny { font-size: .75rem; margin-top: 10px; }

@@ -104,7 +104,7 @@
     card.style.transitionDelay = i * 0.12 + "s";
     card.innerHTML = `
       <div class="ev-icon">${ICONS[ev.icon] || ICONS.muhurtham}</div>
-      <p class="kn">${esc(ev.kannada || "")}</p>
+      <p class="kn">${esc(ev.subtitle || "")}</p>
       <h3>${esc(ev.name)}</h3>
       <p class="ev-date">${fmt(s, { weekday: "short", day: "numeric", month: "short", year: "numeric" })}</p>
       <p class="ev-time">${ev.timeLabel ? esc(ev.timeLabel) : fmt(s, { hour: "numeric", minute: "2-digit" }) + " – " + fmt(e, { hour: "numeric", minute: "2-digit" })}</p>
