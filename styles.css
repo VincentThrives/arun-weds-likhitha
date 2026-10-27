@@ -371,3 +371,15 @@ textarea { resize: vertical; }
   .venue-card h3 { font-size: 1.6rem; line-height: 1.25; }
   .hero-loc { font-size: .72rem; }
 }
+
+/* ---- top-right social ---- */
+.social { position: fixed; top: max(14px, env(safe-area-inset-top)); right: 14px; z-index: 60; display: flex; gap: 10px; }
+.soc { position: relative; width: 42px; height: 42px; border-radius: 50%; display: grid; place-items: center; color: #fff; text-decoration: none;
+  box-shadow: 0 6px 16px rgba(0,0,0,.25), inset 0 0 0 1.5px rgba(232,201,138,.7); transition: transform .3s ease, box-shadow .3s ease; }
+.soc svg { width: 21px; height: 21px; }
+.soc.wa { background: #25d366; }
+.soc.ig { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285aeb 90%); }
+.soc:hover { transform: translateY(-2px) scale(1.06); box-shadow: 0 10px 22px rgba(0,0,0,.3), inset 0 0 0 1.5px var(--gold-soft); }
+.soc.wa::after { content: ""; position: absolute; width: 42px; height: 42px; border-radius: 50%; animation: waPing 2.6s ease-out infinite; pointer-events: none; }
+@keyframes waPing { 0% { box-shadow: 0 0 0 0 rgba(37,211,102,.5); } 100% { box-shadow: 0 0 0 14px rgba(37,211,102,0); } }
+@media (max-width: 760px) { .social { right: 12px; gap: 8px; } .soc { width: 38px; height: 38px; } .soc.wa::after { width: 38px; height: 38px; } .soc svg { width: 19px; height: 19px; } }

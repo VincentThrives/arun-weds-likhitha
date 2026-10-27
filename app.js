@@ -211,6 +211,13 @@ ${venueUrl}`;
     burst();
   });
 
+  /* ---------- top-right social ---------- */
+  const inviteText = "You're invited to the wedding of " + W.groom.name + " & " + W.bride.name + " 💐\n" + location.href;
+  $("#waLink").href = W.whatsapp
+    ? "https://wa.me/" + W.whatsapp + "?text=" + encodeURIComponent("Namaskara! 🙏 Congratulations on the wedding!")
+    : "https://wa.me/?text=" + encodeURIComponent(inviteText);
+  $("#igLink").href = W.instagram || "https://www.instagram.com/explore/tags/" + W.hashtag.replace(/^#/, "").toLowerCase() + "/";
+
   /* ---------- share ---------- */
   $("#shareBtn").addEventListener("click", async () => {
     const data = { title: "Arun & Likhitha — Wedding Invitation", text: "You're invited to the wedding of Arun Gowda K & Likhitha H K 💐", url: location.href };
