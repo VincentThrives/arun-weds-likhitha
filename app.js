@@ -151,7 +151,9 @@ ${venueUrl}`;
     try { await navigator.clipboard.writeText(text); $("#locNote").textContent = "Location copied — paste it anywhere 📍"; }
     catch (_) { window.open("https://wa.me/?text=" + encodeURIComponent(text), "_blank", "noopener"); }
   });
-  $("#mapFrame").src = "https://maps.google.com/maps?q=" + encodeURIComponent(W.venue.mapQuery || W.venue.address) + "&z=14&output=embed";
+  const V = W.venue;
+  $("#mapFrame").src = "https://maps.google.com/maps?q=" + encodeURIComponent(V.embedQuery || V.mapQuery || V.address) +
+    (V.lat ? "&ll=" + V.lat + "," + V.lng : "") + "&z=16&hl=en&output=embed";
 
   /* ---------- gallery ---------- */
   const mas = $("#masonry");

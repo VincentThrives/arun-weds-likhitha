@@ -63,7 +63,9 @@ window.WEDDING = {
     name: "Sri Annapoorneshwari Kalyana Mantapa",
     address: "Sachin Layout, Jyothinagara, Sira Town, Tumkur Dist., Karnataka",
     mapQuery: "Sri Annapoorneshwari Kalyana Mantapa, Jyothinagara, Sira",
-    mapsLink: "https://share.google/KvGPh3R1ogPxDKvGd",   // used by every "Directions"/"Map" button
+    mapsLink: "https://share.google/KvGPh3R1ogPxDKvGd",
+    embedQuery: "Shree Annapoorneshwari Kalyana Mantapa Sira",   // exact Google Maps place name
+    lat: 13.753469, lng: 76.9065568,                            // pins the embedded map   // used by every "Directions"/"Map" button
   },
 
   // "Awaiting your presence"
