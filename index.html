@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Arun & Likhitha — Wedding Invitation</title>
+  <meta name="description" content="With the blessings of our families, Arun Gowda K & Likhitha H K invite you to celebrate their wedding." />
+  <meta name="theme-color" content="#4a0d18" />
+  <!-- WhatsApp / social preview. Set og:image to an absolute URL once hosted. -->
+  <meta property="og:title" content="Arun ❤ Likhitha — 12 November 2026, Sira" />
+  <meta property="og:description" content="Join us as we begin our forever. Tap to open the invitation." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://vincentthrives.github.io/arun-weds-likhitha/assets/photos/og-cover.jpg" />
+  <meta property="og:url" content="https://vincentthrives.github.io/arun-weds-likhitha/" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%237a1526'/%3E%3Ctext x='32' y='42' font-size='26' text-anchor='middle' fill='%23e8c98a' font-family='serif'%3EA%26L%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Pinyon+Script&family=Jost:wght@300;400;500&family=Noto+Serif+Kannada:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="locked">
+
+  <!-- ============ ENVELOPE INTRO ============ -->
+  <div id="intro" class="intro" aria-label="Open the invitation">
+    <div class="intro-glow"></div>
+    <p class="intro-kicker">ಶ್ರೀ ಗಣೇಶಾಯ ನಮಃ</p>
+    <p class="intro-to">You are cordially invited</p>
+    <div class="envelope" id="envelope">
+      <div class="env-back"></div>
+      <div class="env-letter">
+        <span class="script">Arun</span>
+        <span class="amp">&amp;</span>
+        <span class="script">Likhitha</span>
+      </div>
+      <div class="env-front"></div>
+      <div class="env-flap"></div>
+      <button class="seal" id="openBtn" aria-label="Open invitation">
+        <span>A<i>&amp;</i>L</span>
+      </button>
+    </div>
+    <p class="intro-hint">Tap the seal to open</p>
+  </div>
+
+  <canvas id="petals" aria-hidden="true"></canvas>
+
+  <button id="musicBtn" class="music-btn" aria-label="Play or pause music" hidden>
+    <span class="bars"><i></i><i></i><i></i><i></i></span>
+  </button>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero" id="top">
+    <div class="hero-bg" id="heroBg"></div>
+    <svg class="mandala" id="mandala" viewBox="-200 -200 400 400" aria-hidden="true"></svg>
+    <div class="hero-inner">
+      <p class="invocation kn">ಶ್ರೀ ಗಣೇಶಾಯ ನಮಃ</p>
+      <p class="blessing reveal" data-bind="blessing"></p>
+      <p class="eyebrow reveal">Together with their families</p>
+      <h1 class="names">
+        <span class="name reveal" data-bind="groom.name"></span>
+        <span class="weds reveal">weds</span>
+        <span class="name reveal" data-bind="bride.name"></span>
+      </h1>
+      <p class="names-kn kn reveal"><span data-bind="groom.kannada"></span> &nbsp;❀&nbsp; <span data-bind="bride.kannada"></span></p>
+      <div class="hero-date reveal">
+        <span id="heroDay"></span>
+        <span class="dot"></span>
+        <span id="heroDate"></span>
+        <span class="dot"></span>
+        <span data-bind="city"></span>
+      </div>
+      <p class="hero-lagna reveal">Muhurtham · 8:00 – 8:45 am · <span data-bind="lagna"></span></p>
+      <div class="countdown reveal" id="countdown">
+        <div><b id="cdD">0</b><small>Days</small></div>
+        <div><b id="cdH">0</b><small>Hours</small></div>
+        <div><b id="cdM">0</b><small>Minutes</small></div>
+        <div><b id="cdS">0</b><small>Seconds</small></div>
+      </div>
+      <a class="hero-loc reveal" id="heroLoc" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z" fill="currentColor"/></svg>
+        <span data-bind="venue.name"></span>
+      </a>
+      <br />
+      <a href="#invite" class="scroll-cue" aria-label="Scroll down"><span></span></a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ INVITATION ============ -->
+    <section id="invite" class="section invite">
+      <div class="ornament reveal"></div>
+      <p class="kn reveal invite-kn">ಶುಭ ವಿವಾಹ ಮಹೋತ್ಸವಕ್ಕೆ ಆದರದ ಸ್ವಾಗತ</p>
+      <h2 class="title reveal">The Wedding Invitation</h2>
+      <p class="elders reveal" data-bind="elders"></p>
+      <p class="lead reveal">
+        With hearts full of joy and the blessings of our elders,<br />
+        we request the honour of your presence at the wedding of
+      </p>
+      <div class="couple-cards">
+        <article class="person reveal">
+          <div class="portrait" id="groomPhoto"><span class="mono">A</span></div>
+          <p class="ptitle" data-bind="groom.title"></p>
+          <h3 data-bind="groom.name"></h3>
+          <p class="kn small" data-bind="groom.kannada"></p>
+          <p class="parents" data-bind="groom.parents"></p>
+          <p class="place" data-bind="groom.place"></p>
+        </article>
+        <div class="knot reveal" aria-hidden="true">
+          <svg viewBox="0 0 80 80"><g fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="30" cy="40" r="18"/><circle cx="50" cy="40" r="18"/></g><circle cx="40" cy="40" r="3" fill="currentColor"/></svg>
+        </div>
+        <article class="person reveal">
+          <div class="portrait" id="bridePhoto"><span class="mono">L</span></div>
+          <p class="ptitle" data-bind="bride.title"></p>
+          <h3 data-bind="bride.name"></h3>
+          <p class="kn small" data-bind="bride.kannada"></p>
+          <p class="parents" data-bind="bride.parents"></p>
+          <p class="place" data-bind="bride.place"></p>
+        </article>
+      </div>
+      <div class="hosts reveal">
+        <p class="hosts-title">Awaiting your presence</p>
+        <ul id="hosts"></ul>
+      </div>
+      <p class="hashtag reveal" data-bind="hashtag"></p>
+    </section>
+
+    <!-- ============ STORY ============ -->
+    <section id="story" class="section story">
+      <div class="story-wrap">
+        <h2 class="title reveal">Our Story</h2>
+        <div class="ornament small reveal"></div>
+        <div id="storyText" class="story-text"></div>
+      </div>
+    </section>
+
+    <!-- ============ EVENTS ============ -->
+    <section id="events" class="section events">
+      <p class="kn reveal">ಕಾರ್ಯಕ್ರಮಗಳು</p>
+      <h2 class="title reveal">Wedding Celebrations</h2>
+      <div class="ornament small reveal"></div>
+      <div class="timeline" id="timeline"></div>
+    </section>
+
+    <!-- ============ GALLERY ============ -->
+    <section id="gallery" class="section gallery">
+      <h2 class="title reveal">Moments</h2>
+      <p class="lead reveal" id="galleryNote">A few frames from our journey</p>
+      <div class="masonry" id="masonry"></div>
+    </section>
+
+    <!-- ============ VIDEO ============ -->
+    <section id="film" class="section film">
+      <h2 class="title reveal light">Our Film</h2>
+      <div class="ornament small light reveal"></div>
+      <div class="film-frame reveal" id="filmFrame">
+        <div class="film-placeholder">
+          <div class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></div>
+          <p>Pre-wedding film — coming soon</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ VENUE ============ -->
+    <section id="venue" class="section venue">
+      <p class="kn reveal">ಸ್ಥಳ</p>
+      <h2 class="title reveal">The Venue</h2>
+      <div class="ornament small reveal"></div>
+      <div class="venue-grid">
+        <div class="venue-card reveal">
+          <div class="pin" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z" fill="currentColor"/></svg>
+            <span class="pin-pulse"></span>
+          </div>
+          <h3 data-bind="venue.name"></h3>
+          <p data-bind="venue.address"></p>
+          <a class="maps-cta" id="dirBtn" target="_blank" rel="noopener">
+            <span class="g-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7z" fill="#ea4335"/><circle cx="12" cy="9" r="2.6" fill="#fff"/></svg>
+            </span>
+            <span class="cta-text"><b>Open in Google Maps</b><small>Tap for live directions to the mantapa</small></span>
+            <span class="cta-arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <div class="btn-row">
+            <button class="btn ghost" id="shareLocBtn" type="button">Share Location</button>
+            <button class="btn ghost" id="calBtn" type="button">Add to Calendar</button>
+          </div>
+          <p class="form-note" id="locNote"></p>
+        </div>
+        <div class="map reveal"><iframe id="mapFrame" title="Venue map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+      </div>
+    </section>
+
+    <!-- ============ RSVP ============ -->
+    <section id="rsvp" class="section rsvp">
+      <div class="rsvp-card reveal">
+        <h2 class="title">Will you join us?</h2>
+        <p class="lead" id="rsvpBy"></p>
+        <form id="rsvpForm" novalidate>
+          <label>Your name<input name="name" required autocomplete="name" placeholder="Full name" /></label>
+          <div class="choice">
+            <label><input type="radio" name="attend" value="Joyfully attending" checked /><span>Joyfully attending</span></label>
+            <label><input type="radio" name="attend" value="Will celebrate from afar" /><span>Celebrating from afar</span></label>
+          </div>
+          <label>Number of guests
+            <select name="guests"><option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option></select>
+          </label>
+          <label>Blessings for the couple<textarea name="msg" rows="3" placeholder="Write a note (optional)"></textarea></label>
+          <button class="btn wide" type="submit">Send RSVP on WhatsApp</button>
+          <p class="form-note" id="formNote"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="ornament small light"></div>
+    <p class="script big">Arun &amp; Likhitha</p>
+    <p class="kn">ನಿಮ್ಮ ಆಶೀರ್ವಾದವೇ ನಮಗೆ ಉಡುಗೊರೆ</p>
+    <p class="muted">Your blessings are the greatest gift</p>
+    <button class="btn ghost light" id="shareBtn" type="button">Share this invitation</button>
+    <p class="muted tiny" data-bind="hashtag"></p>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lb-close" aria-label="Close">&times;</button>
+    <button class="lb-prev" aria-label="Previous">&#8249;</button>
+    <img alt="" id="lbImg" />
+    <button class="lb-next" aria-label="Next">&#8250;</button>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
