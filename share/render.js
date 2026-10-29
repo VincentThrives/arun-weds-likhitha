@@ -6,7 +6,8 @@ const dir = __dirname, url = "file:///" + path.join(dir, "cards.html").split(pat
 const CARDS = {
   1: ["1-royal-maroon-gold", 1080, 1350], 2: ["2-ivory-minimal-arch", 1080, 1350], 3: ["3-sage-botanical", 1080, 1350],
   4: ["4-temple-traditional", 1080, 1350], 5: ["5-emerald-art-deco", 1080, 1350], 6: ["og-cover", 1200, 630],
-  7: ["6-ivory-gold-classic", 1080, 1350], 8: ["7-midnight-navy-gold", 1080, 1350],
+  7: ["ivory-gold-classic", 1080, 1350], 8: ["midnight-navy-gold", 1080, 1350],
+  9: ["6-blush-rose-floral", 1080, 1350], 10: ["7-peacock-teal-gold", 1080, 1350],
 };
 const ids = process.argv.slice(2).length ? process.argv.slice(2) : Object.keys(CARDS);
 for (const id of ids) {
