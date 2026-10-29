@@ -156,6 +156,38 @@
   .d5 .scan { color: #d4af6a; font-size: 15px; }
   .d5 .link { color: #f1e6cc; font-size: 19px; margin-top: 6px; }
 
+  /* ========== 7. IVORY & GOLD (same layout as 1) ========== */
+  .t7 { background: radial-gradient(ellipse at 50% 38%, #fffaf0 0%, #f6ecd8 60%, #ead8b4 100%); color: #5a1020; }
+  .t7 .gold { background: linear-gradient(120deg,#7a4c14 0%,#c9963e 30%,#8a5a1c 50%,#d7a955 72%,#7a4c14 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .t7 .frame { border-color: rgba(184,137,59,.8); }
+  .t7 .frame2 { border-color: rgba(184,137,59,.4); }
+  .t7 .mandala { color: #b8893b; opacity: .16; }
+  .t7 .om, .t7 .eyebrow { color: #9a6b28; }
+  .t7 .weds { color: #7a1526; }
+  .t7 .weds:before, .t7 .weds:after { background: #b8893b; }
+  .t7 .ev { background: linear-gradient(180deg, #fffdf8, #f7ead0);
+     box-shadow: 0 0 0 2px #b8893b, 0 0 0 9px #fbf3e2, 0 0 0 10px rgba(184,137,59,.55), 0 22px 44px rgba(122,21,38,.16), inset 0 0 50px rgba(184,137,59,.1); }
+  .t7 .ev .ic, .t7 .ev .orn { color: #b8893b; }
+  .t7 .ev .wd, .t7 .ev .mm { color: #5a1020; }
+  .t7 .ev .tm { background: linear-gradient(120deg,#6a0f20,#a3243a 50%,#6a0f20); color: #fbe9bf; }
+  .t7 .ev small { color: #9a6b28; }
+  .t7 .venue { color: #5a1020; }
+  .t7 .venue b { color: #7a1526; }
+  .t7 .qr { background: #fff; box-shadow: 0 0 0 1px rgba(184,137,59,.6); }
+  .t7 .scan { color: #9a6b28; }
+  .t7 .link { color: #5a1020; }
+
+  /* ========== 8. MIDNIGHT NAVY & GOLD (same layout as 1) ========== */
+  .t8 { background: radial-gradient(ellipse at 50% 38%, #213668 0%, #121f42 55%, #070d20 100%); }
+  .t8 .ev { background: linear-gradient(180deg, rgba(232,201,138,.15), rgba(7,13,32,.6));
+     box-shadow: 0 0 0 2px #c8994a, 0 0 0 9px rgba(7,13,32,.7), 0 0 0 10px rgba(232,201,138,.45), 0 24px 50px rgba(0,0,0,.5), inset 0 0 60px rgba(232,201,138,.12); }
+  .t8 .ev .tm { color: #0d1733; }
+  .t8 .stars { position: absolute; inset: 0; background-image:
+     radial-gradient(1.5px 1.5px at 12% 18%, rgba(243,220,166,.8), transparent), radial-gradient(1px 1px at 82% 12%, rgba(243,220,166,.7), transparent),
+     radial-gradient(1.5px 1.5px at 90% 44%, rgba(243,220,166,.6), transparent), radial-gradient(1px 1px at 8% 58%, rgba(243,220,166,.7), transparent),
+     radial-gradient(1.5px 1.5px at 20% 86%, rgba(243,220,166,.6), transparent), radial-gradient(1px 1px at 76% 90%, rgba(243,220,166,.7), transparent),
+     radial-gradient(1px 1px at 50% 6%, rgba(243,220,166,.7), transparent), radial-gradient(1.5px 1.5px at 94% 72%, rgba(243,220,166,.6), transparent); }
+
   /* ========== 6. LINK PREVIEW (1200x630) ========== */
   .d6 { width: 1200px; height: 630px; background: radial-gradient(ellipse at 50% 45%, #7a1a2c 0%, #4a0d18 60%, #26050c 100%); color: #fbf6ee; }
   .d6 .frame { inset: 22px; border: 2px solid rgba(232,201,138,.6); }
@@ -296,6 +328,8 @@ const T = {
   <div class="venue">Sri Annapoorneshwari Kalyana Mantapa</div>
 </div>${foot()}</div>`,
 
+7: () => T[1]().replace('class="card d1"', 'class="card d1 t7"'),
+8: () => T[1]().replace('class="card d1">', 'class="card d1 t8"><div class="stars"></div>'),
 6: () => `<div class="card d6">${M()}<div class="abs frame"></div><div class="inner">
   <div class="eyebrow">You are invited to the wedding of</div>
   <div class="nm gold">Arun<i>&amp;</i>Likhitha</div>
@@ -308,8 +342,8 @@ if (d === 6) document.body.classList.add("wide");
 document.getElementById("root").innerHTML = T[d]();
 const q = document.getElementById("qr");
 if (q) {
-  const dark = { 1: "#4a0d18", 2: "#3b2f27", 3: "#3d4a3a", 4: "#6b0a13", 5: "#08302a" }[d];
-  const light = { 1: "#fbf6ee", 2: "#ffffff", 3: "#ffffff", 4: "#fff3d6", 5: "#f1e6cc" }[d];
+  const dark = { 7: "#5a1020", 8: "#121f42", 1: "#4a0d18", 2: "#3b2f27", 3: "#3d4a3a", 4: "#6b0a13", 5: "#08302a" }[d];
+  const light = { 7: "#ffffff", 8: "#fbf6ee", 1: "#fbf6ee", 2: "#ffffff", 3: "#ffffff", 4: "#fff3d6", 5: "#f1e6cc" }[d];
   new QRCode(q, { text: SITE, width: 300, height: 300, colorDark: dark, colorLight: light, correctLevel: QRCode.CorrectLevel.M });
 }
 </script>
