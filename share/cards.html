@@ -270,6 +270,16 @@
   .t11 .venue b { font-size: 33px; }
   .t11 .foot { bottom: 52px; }
 
+  /* ========== 12. ROYAL MAROON WITH PORTRAIT COLLAGE ========== */
+  .t12 .photo { background: none; }
+  .t12 .cl { position: absolute; left: 0; right: 0; top: 345px; height: 560px; display: flex; justify-content: center;
+     -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 22%, #000 62%, transparent 100%); mask-image: linear-gradient(to bottom, transparent 0%, #000 22%, #000 62%, transparent 100%); }
+  .t12 .cl .half { flex: 0 0 560px; background-size: cover; background-repeat: no-repeat; }
+  .t12 .cl .bride { background-image: url("../assets/photos/bride.jpg"); background-position: 55% 0%;
+     -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 14%, #000 80%, transparent 100%); mask-image: linear-gradient(to right, transparent 0%, #000 14%, #000 80%, transparent 100%); }
+  .t12 .cl .groom { background-image: url("../assets/photos/groom.jpg"); background-position: 35% 30%; margin-left: -110px;
+     -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 20%, #000 86%, transparent 100%); mask-image: linear-gradient(to right, transparent 0%, #000 20%, #000 86%, transparent 100%); }
+
   /* ========== 6. LINK PREVIEW (1200x630) ========== */
   .d6 { width: 1200px; height: 630px; background: radial-gradient(ellipse at 50% 45%, #7a1a2c 0%, #4a0d18 60%, #26050c 100%); color: #fbf6ee; }
   .d6 .frame { inset: 22px; border: 2px solid rgba(232,201,138,.6); }
@@ -468,6 +478,8 @@ const T = {
 
 11: () => T[1]().replace('class="card d1">', 'class="card d1 t11"><div class="photo"></div>'),
 
+12: () => T[1]().replace('class="card d1">', 'class="card d1 t11 t12"><div class="photo"><div class="cl"><div class="half bride"></div><div class="half groom"></div></div></div>'),
+
 6: () => `<div class="card d6">${M()}<div class="abs frame"></div><div class="inner">
   <div class="eyebrow">You are invited to the wedding of</div>
   <div class="nm gold">Arun<i>&amp;</i>Likhitha</div>
@@ -480,8 +492,8 @@ if (d === 6) document.body.classList.add("wide");
 document.getElementById("root").innerHTML = T[d]();
 const q = document.getElementById("qr");
 if (q) {
-  const dark = { 11: "#4a0d18", 9: "#6b3a3f", 10: "#062a33", 7: "#5a1020", 8: "#121f42", 1: "#4a0d18", 2: "#3b2f27", 3: "#3d4a3a", 4: "#6b0a13", 5: "#08302a" }[d];
-  const light = { 11: "#fbf6ee", 9: "#ffffff", 10: "#f6ead0", 7: "#ffffff", 8: "#fbf6ee", 1: "#fbf6ee", 2: "#ffffff", 3: "#ffffff", 4: "#fff3d6", 5: "#f1e6cc" }[d];
+  const dark = { 12: "#4a0d18", 11: "#4a0d18", 9: "#6b3a3f", 10: "#062a33", 7: "#5a1020", 8: "#121f42", 1: "#4a0d18", 2: "#3b2f27", 3: "#3d4a3a", 4: "#6b0a13", 5: "#08302a" }[d];
+  const light = { 12: "#fbf6ee", 11: "#fbf6ee", 9: "#ffffff", 10: "#f6ead0", 7: "#ffffff", 8: "#fbf6ee", 1: "#fbf6ee", 2: "#ffffff", 3: "#ffffff", 4: "#fff3d6", 5: "#f1e6cc" }[d];
   new QRCode(q, { text: SITE, width: 300, height: 300, colorDark: dark, colorLight: light, correctLevel: QRCode.CorrectLevel.M });
 }
 </script>
