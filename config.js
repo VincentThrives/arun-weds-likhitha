@@ -81,7 +81,7 @@ window.WEDDING = {
   rsvpBy: "",
 
   heroImage: "",                 // single wide photo (used when heroCollage is empty), e.g. "assets/photos/couple-steps.jpg"
-  heroCollage: ["assets/photos/groom.jpg", "assets/photos/bride.jpg"],   // portraits merged side by side
+  heroCollage: ["assets/photos/bride.jpg", "assets/photos/groom.jpg"],   // portraits merged side by side
   gallery: [],
   video: { youtubeId: "", file: "", poster: "" },
   music: "",

@@ -397,10 +397,10 @@ textarea { resize: vertical; }
 .hero.collage-mode .hero-bg { height: min(70vh, 112vw); background: none; }
 .hero.collage-mode .collage { position: absolute; inset: 0; display: flex; justify-content: center; }
 .hero.collage-mode .half { flex: 0 0 min(50%, 400px); background-size: cover; background-repeat: no-repeat; }
-.hero.collage-mode .half:first-child { background-position: 30% 30%;
+.hero.collage-mode .half:first-child { background-size: auto 128%; background-position: 60% 14%;
   -webkit-mask-image: linear-gradient(to right, #000 78%, transparent 100%); mask-image: linear-gradient(to right, #000 78%, transparent 100%); }
-.hero.collage-mode .half:last-child { margin-left: -14%; flex-basis: min(64%, 470px); background-size: auto 128%; background-position: 62% 14%;
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 24%); mask-image: linear-gradient(to right, transparent 0%, #000 24%); }
+.hero.collage-mode .half:last-child { margin-left: -8%; flex-basis: min(58%, 440px); background-position: 30% 30%;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 16%); mask-image: linear-gradient(to right, transparent 0%, #000 16%); }
 .hero.collage-mode .hero-bg.has-img::after {
   background: linear-gradient(180deg, rgba(45,7,16,.35) 0%, rgba(45,7,16,0) 18%, rgba(45,7,16,0) 55%, rgba(74,13,24,.75) 82%, #4f0e1a 100%); }
 @media (min-width: 761px) {
