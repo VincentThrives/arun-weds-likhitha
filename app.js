@@ -60,6 +60,7 @@
     const bg = $("#heroBg");
     bg.style.backgroundImage = `url("${W.heroImage}")`;
     bg.classList.add("has-img");
+    $(".hero").classList.add("photo");
     window.addEventListener("scroll", () => { bg.style.transform = `translateY(${window.scrollY * 0.3}px)`; }, { passive: true });
   }
   function revealHero() { $$(".hero .reveal").forEach((el, i) => setTimeout(() => el.classList.add("in"), 150 * i)); }
@@ -195,8 +196,9 @@ ${venueUrl}`;
   } else if (v.file) {
     $("#filmFrame").innerHTML = `<video src="${esc(v.file)}" ${v.poster ? `poster="${esc(v.poster)}"` : ""} controls playsinline preload="metadata"></video>`;
   }
+  if (!v.youtubeId && !v.file) $("#film").remove();   // no film yet: hide the section
   // pause background music while the film plays
-  $("#filmFrame").addEventListener("play", () => audio && audio.pause(), true);
+  else $("#filmFrame").addEventListener("play", () => audio && audio.pause(), true);
 
   /* ---------- RSVP ---------- */
   if (W.rsvpBy) $("#rsvpBy").textContent = "Kindly respond by " + W.rsvpBy;

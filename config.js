@@ -82,7 +82,7 @@ window.WEDDING = {
   rsvpWhatsApp: "917899250602",
   rsvpBy: "",
 
-  heroImage: "",
+  heroImage: "assets/photos/couple-steps.jpg",
   gallery: [],
   video: { youtubeId: "", file: "", poster: "" },
   music: "",

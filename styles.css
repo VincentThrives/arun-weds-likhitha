@@ -383,3 +383,11 @@ textarea { resize: vertical; }
 .soc.wa::after { content: ""; position: absolute; width: 42px; height: 42px; border-radius: 50%; animation: waPing 2.6s ease-out infinite; pointer-events: none; }
 @keyframes waPing { 0% { box-shadow: 0 0 0 0 rgba(37,211,102,.5); } 100% { box-shadow: 0 0 0 14px rgba(37,211,102,0); } }
 @media (max-width: 760px) { .social { right: 12px; gap: 8px; } .soc { width: 38px; height: 38px; } .soc.wa::after { width: 38px; height: 38px; } .soc svg { width: 19px; height: 19px; } }
+
+/* ---- hero with couple photo: photo on top, details below ---- */
+.hero.photo { place-items: end center; padding-top: 52vh; }
+.hero.photo .hero-bg { inset: 0 0 auto 0; height: 80vh; background-position: 50% 28%; }
+.hero.photo .hero-bg.has-img::after {
+  background: linear-gradient(180deg, rgba(45,7,16,.45) 0%, rgba(45,7,16,.08) 16%, rgba(45,7,16,0) 40%, rgba(74,13,24,.55) 62%, rgba(74,13,24,.92) 82%, #4f0e1a 100%); }
+.hero.photo .mandala { top: 52vh; opacity: .1; }
+@media (min-width: 761px) { .hero.photo { padding-top: 60vh; } .hero.photo .hero-bg { height: 92vh; background-position: 50% 32%; } }
