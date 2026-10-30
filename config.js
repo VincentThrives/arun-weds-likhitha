@@ -4,7 +4,7 @@
    Leave a field "" (empty) to hide it on the page.
    ========================================================================== */
 window.WEDDING = {
-  blessing: "|| Sri Ammaji Krupe || Sri Maradi Ranganatha Swamy Prasanna ||",
+  blessing: "",
   elders: "With the blessings of Smt. Puttamma & Sri Late Palyada Kamegowda",
   groom: {
     name: "Arun Gowda K",
@@ -70,8 +70,6 @@ window.WEDDING = {
   hosts: [
     "Smt. M. Chandramma & Sri K. Kantharaju",
     "Smt. Bhagyalakshmi G.M & Sri Krishnappa H.K",
-    "Smt. Vidyashree K & Sri Narasimhamurthy P.R",
-    "Smt. Chandramma K & Sri Late Gangadharaiah B.C",
   ],
 
   // Top-right social icons
