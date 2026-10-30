@@ -162,9 +162,7 @@ ${venueUrl}`;
   if (photos.length) {
     mas.innerHTML = photos.map((src, i) => `<figure class="reveal" data-i="${i}"><img src="${esc(src)}" alt="" loading="lazy" /></figure>`).join("");
   } else {
-    $("#galleryNote").textContent = "Our favourite frames are on their way — check back soon";
-    const h = [320, 220, 280, 240, 340, 210];
-    mas.innerHTML = h.map((px, i) => `<figure class="ph reveal" style="height:${px}px"><span>${i % 2 ? "L" : "A"}</span></figure>`).join("");
+    $("#gallery").remove();   // no photos yet: hide the section
   }
   const lb = $("#lightbox"), lbImg = $("#lbImg");
   let cur = 0;
