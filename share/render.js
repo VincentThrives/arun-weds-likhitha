@@ -8,6 +8,7 @@ const CARDS = {
   4: ["4-temple-traditional", 1080, 1350], 5: ["5-emerald-art-deco", 1080, 1350], 6: ["og-cover", 1200, 630],
   7: ["ivory-gold-classic", 1080, 1350], 8: ["midnight-navy-gold", 1080, 1350],
   9: ["6-blush-rose-floral", 1080, 1350], 10: ["7-peacock-teal-gold", 1080, 1350],
+  11: ["8-royal-maroon-photo", 1080, 1350],
 };
 const ids = process.argv.slice(2).length ? process.argv.slice(2) : Object.keys(CARDS);
 for (const id of ids) {

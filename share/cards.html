@@ -248,6 +248,28 @@
   .d10 .qr img, .d10 .qr canvas { width: 118px !important; height: 118px !important; }
   .d10 .foot .txt { text-align: left; } .d10 .scan { color: #e9c98a; font-size: 15px; } .d10 .link { color: #f6ead0; font-size: 19px; margin-top: 6px; }
 
+  /* ========== 11. ROYAL MAROON WITH COUPLE PHOTO ========== */
+  .t11 .photo { position: absolute; inset: 0; background: url('../assets/photos/couple-steps.jpg') 48.6% 0 / 2400px auto no-repeat; }
+  .t11 .photo::after { content: ''; position: absolute; inset: 0;
+     background: linear-gradient(180deg, rgba(38,5,12,.95) 0%, rgba(50,7,16,.88) 22%, rgba(74,13,24,.45) 31%, rgba(74,13,24,.08) 38%, rgba(74,13,24,.05) 47%, rgba(58,9,19,.55) 53%, rgba(38,5,12,.90) 60%, rgba(30,4,9,.97) 100%); }
+  .t11 .mandala { display: none; }
+  .t11 .inner { padding-top: 78px; }
+  .t11 .eyebrow { margin-top: 16px; }
+  .t11 .nm { font-size: 100px; line-height: 1.1; }
+  .t11 .weds { font-size: 34px; margin: 0; }
+  .t11 .events { margin-top: 284px; gap: 30px; }
+  .t11 .ev { width: 430px; padding: 22px 16px 18px; border-radius: 215px 215px 18px 18px; background: linear-gradient(180deg, rgba(74,13,24,.75), rgba(30,4,9,.92)); }
+  .t11 .ev .ic { display: none; }
+  .t11 .ev h4 { font-size: 31px; margin-top: 20px; }
+  .t11 .ev .orn { margin: 4px auto 6px; }
+  .t11 .ev .wd, .t11 .ev .mm { font-size: 18px; }
+  .t11 .ev .dd { font-size: 64px; margin: 0; }
+  .t11 .ev .tm { font-size: 27px; margin-top: 8px; padding: 6px 22px; }
+  .t11 .ev small { font-size: 14px; margin-top: 8px; }
+  .t11 .venue { margin-top: 16px; font-size: 27px; }
+  .t11 .venue b { font-size: 33px; }
+  .t11 .foot { bottom: 52px; }
+
   /* ========== 6. LINK PREVIEW (1200x630) ========== */
   .d6 { width: 1200px; height: 630px; background: radial-gradient(ellipse at 50% 45%, #7a1a2c 0%, #4a0d18 60%, #26050c 100%); color: #fbf6ee; }
   .d6 .frame { inset: 22px; border: 2px solid rgba(232,201,138,.6); }
@@ -445,6 +467,8 @@ const T = {
   <div class="venue"><b>Sri Annapoorneshwari Kalyana Mantapa</b>Sachin Layout, Jyothinagara, Sira</div>
 </div>${foot()}</div>`,
 
+11: () => T[1]().replace('class="card d1">', 'class="card d1 t11"><div class="photo"></div>'),
+
 6: () => `<div class="card d6">${M()}<div class="abs frame"></div><div class="inner">
   <div class="eyebrow">You are invited to the wedding of</div>
   <div class="nm gold">Arun<i>&amp;</i>Likhitha</div>
@@ -457,8 +481,8 @@ if (d === 6) document.body.classList.add("wide");
 document.getElementById("root").innerHTML = T[d]();
 const q = document.getElementById("qr");
 if (q) {
-  const dark = { 9: "#6b3a3f", 10: "#062a33", 7: "#5a1020", 8: "#121f42", 1: "#4a0d18", 2: "#3b2f27", 3: "#3d4a3a", 4: "#6b0a13", 5: "#08302a" }[d];
-  const light = { 9: "#ffffff", 10: "#f6ead0", 7: "#ffffff", 8: "#fbf6ee", 1: "#fbf6ee", 2: "#ffffff", 3: "#ffffff", 4: "#fff3d6", 5: "#f1e6cc" }[d];
+  const dark = { 11: "#4a0d18", 9: "#6b3a3f", 10: "#062a33", 7: "#5a1020", 8: "#121f42", 1: "#4a0d18", 2: "#3b2f27", 3: "#3d4a3a", 4: "#6b0a13", 5: "#08302a" }[d];
+  const light = { 11: "#fbf6ee", 9: "#ffffff", 10: "#f6ead0", 7: "#ffffff", 8: "#fbf6ee", 1: "#fbf6ee", 2: "#ffffff", 3: "#ffffff", 4: "#fff3d6", 5: "#f1e6cc" }[d];
   new QRCode(q, { text: SITE, width: 300, height: 300, colorDark: dark, colorLight: light, correctLevel: QRCode.CorrectLevel.M });
 }
 </script>
