@@ -56,9 +56,16 @@
   })();
 
   /* ---------- hero image + parallax ---------- */
-  if (W.heroImage) {
+  const collage = W.heroCollage || [];
+  if (collage.length || W.heroImage) {
     const bg = $("#heroBg");
-    bg.style.backgroundImage = `url("${W.heroImage}")`;
+    if (collage.length) {
+      // portraits side by side, blended where they meet
+      bg.innerHTML = `<div class="collage">${collage.map((src) => `<div class="half" style="background-image:url('${esc(src)}')"></div>`).join("")}</div>`;
+      $(".hero").classList.add("collage-mode");
+    } else {
+      bg.style.backgroundImage = `url("${W.heroImage}")`;
+    }
     bg.classList.add("has-img");
     $(".hero").classList.add("photo");
     window.addEventListener("scroll", () => { bg.style.transform = `translateY(${window.scrollY * 0.3}px)`; }, { passive: true });
