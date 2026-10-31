@@ -271,7 +271,7 @@
   .t11 .foot { bottom: 52px; }
 
   /* ========== 12. ROYAL MAROON WITH PORTRAIT COLLAGE ========== */
-  .t12 .photo { background: none; }
+  .t12 .photo { background: url("../assets/photos/couple-bw.jpg") 50% 22% / 1080px auto no-repeat; }
   .t12 .cl { position: absolute; left: 0; right: 0; top: 345px; height: 560px; display: flex; justify-content: center;
      -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 22%, #000 62%, transparent 100%); mask-image: linear-gradient(to bottom, transparent 0%, #000 22%, #000 62%, transparent 100%); }
   .t12 .cl .half { flex: 0 0 560px; background-size: cover; background-repeat: no-repeat; }
@@ -288,6 +288,7 @@
   .d13 .om { font-family: "Cinzel"; font-size: 20px; letter-spacing: .3em; color: #9a6b28; }
   .d13 .arch { position: relative; width: 560px; height: 500px; margin: 22px auto 0; border-radius: 280px 280px 10px 10px; overflow: hidden;
      box-shadow: 0 0 0 3px #c8994a, 0 0 0 12px #fbf4e6, 0 0 0 13px rgba(184,137,59,.6), 0 26px 50px rgba(74,13,24,.22); }
+  .d13 .arch .ph { position: absolute; inset: 0; background: url("../assets/photos/couple-bw.jpg") 45% 33% / 900px auto no-repeat; }
   .d13 .arch .cl2 { position: absolute; inset: 0; display: flex; }
   .d13 .arch .half { flex: 0 0 310px; background-repeat: no-repeat; }
   .d13 .arch .bride { background: url("../assets/photos/bride.jpg") 71% 11% / auto 150% no-repeat;
@@ -330,6 +331,7 @@
   .d14 .medal .ring { position: absolute; left: -60px; top: -60px; width: 580px; height: 580px; color: #d4af6a; opacity: .55; }
   .d14 .medal .circ { position: absolute; inset: 0; border-radius: 50%; overflow: hidden;
      box-shadow: 0 0 0 4px #d4af6a, 0 0 0 12px rgba(7,13,32,.85), 0 0 0 13px rgba(212,175,106,.6), 0 30px 60px rgba(0,0,0,.5); }
+  .d14 .medal .ph { position: absolute; inset: 0; background: url("../assets/photos/couple-bw.jpg") 45% 36% / 760px auto no-repeat; }
   .d14 .medal .cl2 { position: absolute; inset: 0; display: flex; }
   .d14 .medal .half { flex: 0 0 260px; }
   .d14 .medal .bride { background: url("../assets/photos/bride.jpg") 67% 10% / auto 150% no-repeat;
@@ -552,11 +554,11 @@ const T = {
 
 11: () => T[1]().replace('class="card d1">', 'class="card d1 t11"><div class="photo"></div>'),
 
-12: () => T[1]().replace('class="card d1">', 'class="card d1 t11 t12"><div class="photo"><div class="cl"><div class="half bride"></div><div class="half groom"></div></div></div>'),
+12: () => T[1]().replace('class="card d1">', 'class="card d1 t11 t12"><div class="photo"></div>'),
 
 13: () => `<div class="card d13"><div class="abs frame"></div><div class="abs frame2"></div><div class="inner">
   <div class="om">|| Sri Ganeshaya Namaha ||</div>
-  <div class="arch"><div class="cl2"><div class="half bride"></div><div class="half groom"></div></div></div>
+  <div class="arch"><div class="ph"></div></div>
   <div class="eyebrow">Together with their families</div>
   <div class="nm gd">Arun Gowda K</div>
   <div class="weds">weds</div>
@@ -571,7 +573,7 @@ const T = {
 14: () => `<div class="card d14"><div class="stars"></div><div class="abs frame"></div><div class="abs frame2"></div><div class="inner">
   <div class="om">|| Sri Ganeshaya Namaha ||</div>
   <div class="eyebrow">Together with their families</div>
-  <div class="medal">${mandala([[24, 9, 22, 262, 1], [48, 4, 12, 290, .8]]).replace('class="abs mandala"', 'class="ring"').replace('viewBox="-200 -200 400 400"', 'viewBox="-310 -310 620 620"')}<div class="circ"><div class="cl2"><div class="half bride"></div><div class="half groom"></div></div></div></div>
+  <div class="medal">${mandala([[24, 9, 22, 262, 1], [48, 4, 12, 290, .8]]).replace('class="abs mandala"', 'class="ring"').replace('viewBox="-200 -200 400 400"', 'viewBox="-310 -310 620 620"')}<div class="circ"><div class="ph"></div></div></div>
   <div class="names"><div class="nm gold">Arun Gowda K</div>
   <div class="weds">weds</div>
   <div class="nm gold">Likhitha H K</div></div>

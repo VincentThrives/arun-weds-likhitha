@@ -409,3 +409,7 @@ textarea { resize: vertical; }
   .hero.collage-mode .half:first-child { -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 16%, #000 78%, transparent 100%); mask-image: linear-gradient(to right, transparent 0%, #000 16%, #000 78%, transparent 100%); }
   .hero.collage-mode .half:last-child { margin-left: -90px; flex-basis: 420px; -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 22%, #000 84%, transparent 100%); mask-image: linear-gradient(to right, transparent 0%, #000 22%, #000 84%, transparent 100%); }
 }
+
+/* ---- hero: black & white couple photo (portrait) ---- */
+.hero.photo:not(.collage-mode) .hero-bg { background-size: 165% auto; background-position: 45% 38%; }
+@media (min-width: 761px) { .hero.photo:not(.collage-mode) .hero-bg { background-size: cover; background-position: 50% 37%; } }

@@ -80,8 +80,8 @@ window.WEDDING = {
   rsvpWhatsApp: "917899250602",
   rsvpBy: "",
 
-  heroImage: "",                 // single wide photo (used when heroCollage is empty), e.g. "assets/photos/couple-steps.jpg"
-  heroCollage: ["assets/photos/bride.jpg", "assets/photos/groom.jpg"],   // portraits merged side by side
+  heroImage: "assets/photos/couple-bw.jpg",                 // single wide photo (used when heroCollage is empty), e.g. "assets/photos/couple-steps.jpg"
+  heroCollage: [],   // portraits merged side by side
   gallery: [],
   video: { youtubeId: "", file: "", poster: "" },
   music: "",
