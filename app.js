@@ -87,6 +87,7 @@
   /* ---------- portraits ---------- */
   [["#groomPhoto", W.groom.photo], ["#bridePhoto", W.bride.photo]].forEach(([sel, src]) => {
     if (src) $(sel).innerHTML = `<img src="${esc(src)}" alt="" loading="lazy" />`;
+    else $(sel).remove();   // no portrait: drop the empty frame
   });
 
   /* ---------- hosts ---------- */
